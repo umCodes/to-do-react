@@ -10,7 +10,7 @@ function Modal({ useModal }) {
   const [newTask, setNewTask] = useState({
     id: ((Date.now()).toString(36) + Math.random().toString(36).substr(2, 5)),
     text: '',
-    date: '',
+    date: new Date().toISOString().slice(0, 16),
     done: false,
   });
 
@@ -61,14 +61,14 @@ function Modal({ useModal }) {
         </div>
         <span className="flex flex-wrap items-center justify-center">
           <input
-            className="flex-1 bg-gray-800 mx-2 my-2 p-2 rounded-md min-w-xs" 
+            className="flex-1 bg-gray-800 mx-2 my-2 p-2 rounded-md w-1/2" 
             value={newTask.text}
             placeholder="Enter Todo"
             type="text"
             onChange={e => setNewTask({ ...newTask, text: e.target.value })}
           />
           <input
-            className="flex-1 bg-gray-800 mx-2 my-2 p-2 rounded-md min-w-xs"
+            className="flex-1 bg-gray-800 mx-2 my-2 p-2 rounded-md w-1/2"
             value={newTask.date}
             type="datetime-local"
             placeholder="dd-mm-yyyy"
