@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useEffect} from "react";
 import { TasksContext } from "../../App";
 import { ModalContext } from "../../App";
 import Modal from "../Modal";
@@ -11,7 +11,6 @@ function Task({ task }) {
 
   const handleDelete = id => {
     setTasks(tasks.filter(task => task.id !== id));
-    localStorage.setItem("tasks", JSON.stringify(tasks))
 
   };
 
@@ -20,8 +19,8 @@ function Task({ task }) {
       tasks.map(task => (task.id === id ? { ...task, done: !task.done } : task))
     );
 
-    localStorage.setItem("tasks", JSON.stringify(tasks))
 };
+
 
  const formatDate = (string) => {
 

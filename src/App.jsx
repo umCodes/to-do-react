@@ -1,4 +1,4 @@
-import { createContext, useState } from 'react';
+import { createContext, useEffect, useState } from 'react';
 import Header from './components/Header/Header';
 import Task from './components/Task/Task';
 import Modal from './components/Modal';
@@ -15,6 +15,8 @@ function App() {
     open: false,
     task: null
   });
+
+
 
   const tasksList = tasks.map(task => <Task key={task.id} task={task} />);
 
