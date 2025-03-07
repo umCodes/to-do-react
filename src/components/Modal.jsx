@@ -51,7 +51,7 @@ function Modal({ useModal }) {
                     setModal({task: {
                         id: ((Date.now()).toString(36) + Math.random().toString(36).substr(2, 5)),
                         text: '',
-                        date: '',
+                        date: new Date().toISOString().slice(0, 16),
                         done: false,
                       }, open: !modal.open});
                 }}
@@ -71,7 +71,6 @@ function Modal({ useModal }) {
             className="flex-1 bg-gray-800 mx-2 my-2 p-2 rounded-md min-w-[268px]"
             value={newTask.date}
             type="datetime-local"
-            placeholder="dd-mm-yyyy"
             onChange={e => setNewTask({ ...newTask, date: e.target.value})}
           />
           </span>
@@ -87,7 +86,7 @@ function Modal({ useModal }) {
                 setModal({task: {
                     id: ((Date.now()).toString(36) + Math.random().toString(36).substr(2, 5)),
                     text: '',
-                    date: '',
+                    date: new Date().toISOString().slice(0, 16),
                     done: false,
                   }, open: !modal.open});
 
