@@ -24,6 +24,8 @@ function Task({ task }) {
 };
 
  const formatDate = (string) => {
+
+    if(!string) return "";
     const date = new Date(string);
     
     // Extract date components

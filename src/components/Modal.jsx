@@ -25,14 +25,16 @@ function Modal({ useModal }) {
     else dialog.current.close();
   }, [modal]);
 
+  useEffect(() => {
+    localStorage.setItem("tasks", JSON.stringify(tasks))
+  }, [tasks]);
+
   const addTask = () =>{
      setTasks([...tasks, newTask])
-     localStorage.setItem("tasks", JSON.stringify(tasks))
 
     };
   const editTask = (id) => {
     setTasks(tasks.map(task => task.id === id ? { ...task, ...newTask } : task));
-    localStorage.setItem("tasks", JSON.stringify(tasks))
 
 };
 
