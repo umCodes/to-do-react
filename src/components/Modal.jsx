@@ -68,7 +68,7 @@ function Modal({ useModal }) {
             onChange={e => setNewTask({ ...newTask, text: e.target.value })}
           />
           <input
-            className="flex-1 bg-gray-800 mx-2 my-2 p-2 rounded-md"
+            className="flex-1 bg-gray-800 mx-2 my-2 p-2 rounded-md min-w-full"
             value={newTask.date}
             type="datetime-local"
             placeholder="dd-mm-yyyy"
