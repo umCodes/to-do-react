@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities; 
+
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+body{
+  max-width: 768px;
+  margin: 0;
+  padding: 0;
+  margin-inline: auto;
+}
+
+dialog{
+  max-width: 80vw; 
+  background: none;
+  
+
+}
+
+dialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.715);
+}
+
+
+
+@media screen and (max-width: 480px) {
+  :root {
+    font-size: 16px;
+  }
+  
+  dialog{
+    width: 100vw;
+    position: absolute;
+    bottom: 0;  
+  }
+
+}
