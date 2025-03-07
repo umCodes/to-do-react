@@ -59,16 +59,16 @@ function Modal({ useModal }) {
                 <FontAwesomeIcon icon={faX} />
             </button>
         </div>
-        <span className="flex flex-wrap items-center">
+        <span className="flex flex-wrap items-center justify-center">
           <input
-            className="flex-1 bg-gray-800 mx-2 my-2 p-2 rounded-md"
+            className="flex-1 bg-gray-800 mx-2 my-2 p-2 rounded-md min-w-xs" 
             value={newTask.text}
             placeholder="Enter Todo"
             type="text"
             onChange={e => setNewTask({ ...newTask, text: e.target.value })}
           />
           <input
-            className="flex-1 bg-gray-800 mx-2 my-2 p-2 rounded-md min-w-full"
+            className="flex-1 bg-gray-800 mx-2 my-2 p-2 rounded-md min-w-xs"
             value={newTask.date}
             type="datetime-local"
             placeholder="dd-mm-yyyy"
