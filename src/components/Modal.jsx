@@ -74,6 +74,8 @@ function Modal({ useModal }) {
             placeholder="dd-mm-yyyy"
             onChange={e => setNewTask({ ...newTask, date: e.target.value})}
           />
+          </span>
+
           <button
             className="bg-orange-600 w-fit ml-auto mx-2 my-2 p-1 px-4 my-4 rounded"
             onClick={() => {
@@ -94,7 +96,6 @@ function Modal({ useModal }) {
             done
 
           </button>
-        </span>
       </div>
     </dialog>
   );
