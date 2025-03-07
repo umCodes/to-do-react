@@ -71,6 +71,7 @@ function Modal({ useModal }) {
             className="flex-1 bg-gray-800 mx-2 my-2 p-2 rounded-md"
             value={newTask.date}
             type="datetime-local"
+            placeholder="dd-mm-yyyy"
             onChange={e => setNewTask({ ...newTask, date: e.target.value})}
           />
           <button
